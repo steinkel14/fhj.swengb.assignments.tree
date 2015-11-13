@@ -1,4 +1,4 @@
-package fhj.swengb.assignments.tree.rladstaetter
+package fhj.swengb.assignments.tree.wsteinkellner
 
 import javafx.scene.paint.Color
 
@@ -78,7 +78,7 @@ object MathUtil {
     * @return
     */
   def round(value: Double): Double = {
-    ???
+    return Math.round(value*1000.0)/1000.0
   }
 
   /**
