@@ -51,6 +51,10 @@ class TreeTest {
       Branch(Node(L2D(Pt2D(0.0, 0.0), Pt2D(100.0, 0.0), colorMap(0))), Branch(Branch(Node(L2D(Pt2D(100.0, 0.0), Pt2D(199.985, -1.745), colorMap(0))), Branch(Node(L2D(Pt2D(199.985, -1.745), Pt2D(299.924, -5.235), colorMap(1))), Node(L2D(Pt2D(199.985, -1.745), Pt2D(299.985, -1.745), colorMap(1))))), Branch(Node(L2D(Pt2D(100.0, 0.0), Pt2D(199.985, 1.745), colorMap(0))), Branch(Node(L2D(Pt2D(199.985, 1.745), Pt2D(299.985, 1.745), colorMap(1))), Node(L2D(Pt2D(199.985, 1.745), Pt2D(299.924, 5.235), colorMap(1))))))), t)
   }
 
+  @Test def degreeToRadiant(): Unit = {
+    assertEquals(Math.PI/4, MathUtil.toRadiants(45), 0.001)
+  }
+
   @Test def testTraverse(): Unit = {
     val seqs: Seq[L2D] = Graph.traverse(treeOfSize1)(l2d => l2d)
     assertEquals(3, seqs.size)
