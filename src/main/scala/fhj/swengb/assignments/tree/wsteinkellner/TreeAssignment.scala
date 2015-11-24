@@ -93,7 +93,7 @@ object MathUtil {
 }
 
 
-object L2D {
+object  L2D {
 
   import MathUtil._
 
@@ -108,7 +108,10 @@ object L2D {
     * @return
     */
   def apply(start: Pt2D, angle: AngleInDegrees, length: Double, color: Color): L2D = {
-    ???
+    val y = round(length * Math.sin(toRadiants(angle)) + start.y)
+    val x = round(length * Math.cos(toRadiants(angle)) + start.x)
+
+    L2D(start,Pt2D(x,y),color)
   }
 
 
